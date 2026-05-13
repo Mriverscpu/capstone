@@ -1,1 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS UNO Prototype</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body class="bg-dark text-light">
+    <header>
+      <div class="container">
+        <a href="index.html" class="logo">Capstone</a>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="game.html">Gameboard</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="rtu.html">Tech Usage</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
+<div class="container text-center mt-4">
+    <h1 class="mb-4">UNO Engine</h1>
+    
+    <div class="row justify-content-center mb-5">
+        <div class="col-md-3">
+            <h3>Draw Pile</h3>
+            <div id="draw-pile" class="uno-card card-back d-flex align-items-center justify-content-center mx-auto" onclick="drawCard()">
+                <h2>UNO</h2>
+            </div>
+            <p class="mt-2">Cards left: <span id="deck-count">0</span></p>
+        </div>
+        
+        <div class="col-md-3">
+            <h3>Discard Pile</h3>
+            <div id="discard-pile" class="uno-card d-flex align-items-center justify-content-center mx-auto">
+                </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <h3>Your Hand</h3>
+            <div id="player-hand" class="d-flex justify-content-center flex-wrap gap-2 mt-3">
+                </div>
+        </div>
+    </div>
+</div>
+
+<div id="color-modal" class="modal" tabindex="-1" style="display: none; background: rgba(0,0,0,0.8); position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 1000;">
+    <div class="modal-dialog modal-dialog-centered h-100 d-flex align-items-center justify-content-center">
+        <div class="modal-content bg-dark text-light border-light p-4 text-center">
+            <h5 class="mb-4">Choose a Color</h5>
+            <div class="d-flex justify-content-around gap-3">
+                <button class="btn btn-danger rounded-circle p-4" onclick="setWildColor('red')"></button>
+                <button class="btn btn-primary rounded-circle p-4" onclick="setWildColor('blue')"></button>
+                <button class="btn btn-success rounded-circle p-4" onclick="setWildColor('green')"></button>
+                <button class="btn btn-warning rounded-circle p-4" onclick="setWildColor('yellow')"></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+
+<body class="bg-dark text-light">
+
+<div class="container text-center mt-4">
+    <h1 class="mb-4">UNO Engine</h1>
+    
+    <div class="row justify-content-center mb-5">
+        <div class="col-md-3">
+            <h3>Draw Pile</h3>
+            <div id="draw-pile" class="uno-card card-back d-flex align-items-center justify-content-center mx-auto" onclick="drawCard()">
+                <h2>UNO</h2>
+            </div>
+            <p class="mt-2">Cards left: <span id="deck-count">0</span></p>
+        </div>
+        
+        <div class="col-md-3">
+            <h3>Discard Pile</h3>
+            <div id="discard-pile" class="uno-card d-flex align-items-center justify-content-center mx-auto">
+                </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <h3>Your Hand</h3>
+            <div id="player-hand" class="d-flex justify-content-center flex-wrap gap-2 mt-3">
+                </div>
+        </div>
+    </div>
+</div>
+
+<div id="color-modal" class="modal" tabindex="-1" style="display: none; background: rgba(0,0,0,0.8); position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 1000;">
+    
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
